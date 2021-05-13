@@ -1,0 +1,225 @@
+#topic_1
+{
+    margin-bottom: 0.8%;
+    filter:alpha(opacity=50);
+    opacity:0.9;
+
+}
+#topic_2
+{
+    padding: 1%;
+}
+#topic_3
+{
+    padding:0.6%;
+    font-size: 12px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background: rgb(5, 120, 155); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, rgb(24, 153, 240), rgb(58, 49, 1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, rgb(11, 152, 196), rgb(70, 65, 2)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, rgb(8, 157, 184), rgb(87, 81, 3)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, rgb(6, 116, 160), rgb(94, 92, 2)); /* Standard syntax */
+
+    animation-duration: 10s;
+    animation-name: cambiaColor;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#app_1
+{
+    height: 3%;
+    /* text-align:center; */
+    /* text-transform: capitalize; */
+    /* color: antiquewhite; */
+
+    background: rgb(24, 23, 23); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, rgb(15, 15, 15), rgb(58, 49, 1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, rgb(17, 16, 16), rgb(70, 65, 2)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, rgb(19, 18, 18), rgb(87, 81, 3)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, rgb(24, 23, 23), rgb(94, 92, 2)); /* Standard syntax */
+
+    animation-duration: 5s;
+    animation-name: cambiaColor;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+
+  #app_2
+  {
+    background-image: url('/img/game2.jpg')  !important;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    text-align: left;
+    /* background-color: #f8fafc; */
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    opacity: 0.9;
+  }
+.title_topic
+{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style:italic; text-shadow: 1px 1px #047f9e; color:rgb(2, 10, 56)
+}
+
+.nome_topic
+{
+    color:rgb(245, 27, 27); font-family:Arial, Helvetica, sans-serif; font-size: bold; font-weight:normal;
+}
+.star_1
+{
+  position: absolute; margin-left: 1.1%; margin-top: -2.6%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:larger; color: #212529;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+.star_2
+{
+    height:36x; width:36px;
+
+}
+
+.icon_del
+{
+    background-image: url('/img/icons8-del.png')  !important;
+    width: 24px; height:23px; alt: 'https://icons8.com/icon';
+    position: absolute; padding: 0px; margin-top: -10px; margin-left: 1.6% ;
+    background-repeat: no-repeat;  background-size: cover;
+    -webkit-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+}
+.icon_del:hover 
+{
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+.icon_del2
+{
+    background-image: url('/img/delete2.png')  !important;
+    width: 50px; height:50px; alt: 'https://icons8.com/icon';
+    position: relative; padding: 0px; margin-top: -35px; margin-left: 95% ;
+    background-repeat: no-repeat;  background-size: cover;    border: none;
+    -webkit-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+}
+.text_topic1
+{
+    position: relative; padding: 0px; margin-top: 0px; margin-left: 0% ;
+}
+
+.icon_del2:hover 
+{
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.icon_up
+{
+    background-image: url('/img/icons8-update.png')  !important;
+    width: 23px; height:23px; alt: 'https://icons8.com/icon';
+    position: absolute; padding: 0px; margin-top: -10px;margin-left: -1%;
+    background-repeat: no-repeat;  background-size: cover;
+    -webkit-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+
+}
+.icon_up:hover {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+  }
+.btn_topic
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px #105302;box-shadow: 3px 3px #000;
+}
+
+.gato
+{
+    background-image: url('/img/gato2.png')  !important; background-repeat: no-repeat; background-size: cover;
+    height: 140px; width:140px; position: absolute; margin-left: 30%; margin-top: -1.8%;   z-index: 1;
+    alt:"https://br.freepik.com/;
+}
+.logo
+{
+    background-image: url('/img/logo10.png')  !important; background-repeat: no-repeat; background-size: cover;
+    width:53px; height:53px; margin-left: -14.5%; margin-top: -0.6%;position: absolute; z-index: 1;
+
+}
+.txt_logo
+{
+    background-image: url('/img/txt_logo.png')  !important; background-repeat: no-repeat; background-size: cover;
+    width:132px; height:17px; margin-left: -10.2%; margin-top: 0.8%;position: absolute; z-index: 1;
+
+}
+.created
+{
+    color:	#ff9248;
+    text-shadow: #ff6700 1px 1px;
+}
+.control
+{
+    color: 	red;
+    text-shadow: aqua 1px 1.5px;
+}
+.curse
+{
+    color: rgb(244, 117, 255);
+    text-shadow: rgb(234, 0, 255) 1px 1.4px;
+}
+.name_user
+{
+    color: rgb(255, 4, 4);
+    text-shadow: rgb(58, 13, 1) 1px 1.5px;
+}
+.canal_index
+{
+    color: rgb(15, 4, 170);
+    text-shadow: rgb(1, 1, 22) 1px 1px;
+    width: 300px;font-size: bold;
+}
+.canal_index:hover
+{
+    color: rgb(13, 4, 131);
+    text-shadow: rgb(0, 0, 10) 1px 1px;
+    background:rgb(205, 213, 216);
+    text-transform: uppercase;
+    width: 300px;font-size: bold;
+
+}
+.resposta
+{
+    font-size: larger; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    color: #212529; text-shadow: 2px 2px  lightseagreen;
+}
+
+.responder
+{
+    font-size: larger; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    color: #fcfdfd; text-shadow: 2px 2px  lightseagreen;
+}
+
+  @keyframes cambiaColor {
+    from {
+      background: black; /* For browsers that do not support gradients */
+    }
+
+    to {
+      background: rgb(43, 166, 204); /* For browsers that do not support gradients */
+
+      -webkit-transition: background 1000ms linear;
+      -moz-transition: background 1000ms linear;
+      -o-transition: background 1000ms linear;
+      -ms-transition: background 1000ms linear;
+      transition: background 1000ms linear;
+    }
+  }

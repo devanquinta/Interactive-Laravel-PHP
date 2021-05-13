@@ -1,0 +1,32 @@
+#app_2
+{
+  background-image: url('/img/game2.jpg')  !important;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #212529;
+  text-align: left;
+  /* background-color: #f8fafc; */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  opacity: 0.9;
+}
+.logo
+{
+    background-image: url('/img/logo10.png')  !important; background-repeat: no-repeat; background-size: cover;
+    width:53px; height:53px; margin-left: -14.5%; margin-top: -1.7%;position: absolute; z-index: 1;
+
+}
+.txt_logo
+{
+    background-image: url('/img/txt_logo.png')  !important; background-repeat: no-repeat; background-size: cover;
+    width:133px; height:17px; margin-left: -10.2%; margin-top: -0.5%;position: absolute; z-index: 1;
+
+}
+.text
+{
+    font-size:larger; font-weight: bold; font-style: italic; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
