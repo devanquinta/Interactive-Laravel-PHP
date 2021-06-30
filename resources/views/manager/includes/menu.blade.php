@@ -7,6 +7,9 @@
             document.getElementById(el).style.display = 'block';
     }
 </script> --}}
+@if(Auth::user()->role_id == 1)
+    <link href="{{asset('css/user.css')}}" rel="stylesheet">
+@endif
 <body style="background:rgb(250, 250, 250)">
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
             <div class="pt-3 sidebar-sticky" style="background: lightgray;">
@@ -23,7 +26,7 @@
                         <hr>
                     </span>
                     <span  class="nav-item">
-                    <a  class="nav-link @if(request()->is('manager/users')) active @endif" href="{{route('users.index')}}">
+                    <a  class="nav-link @if (Auth::user()->role_id == 1)menuColor @endif @if(request()->is('manager/users')) active @endif" href="{{route('users.index')}}">
                         <span data-feather="file"></span>
                                 USUÁRIOS
                     </a>
@@ -32,8 +35,8 @@
 
 
                     <span   class="nav-item">
-                    <a  class="nav-link @if(request()->is('manager/roles*')) active @endif" href="{{route('roles.index')}}">
-                        <span data-feather="home"></span>
+                    <a  class="nav-link  @if(Auth::user()->role_id == 1)menuColor @endif  @if(request()->is('manager/roles*')) active @endif" href="{{route('roles.index')}}">
+                        <span data-feather="home "></span>
                             PAPÉIS
                         <span class="sr-only">(current)</span>
                     </a>
@@ -41,7 +44,7 @@
                     </span>
 
                     <span   class="nav-item">
-                    <a class="nav-link @if(request()->is('manager/resources*')) active @endif" href="{{route('resources.index')}}">
+                    <a class="nav-link  @if(Auth::user()->role_id == 1) menuColor @endif  @if(request()->is('manager/resources*')) active @endif" href="{{route('resources.index')}}">
                         <span data-feather="file"></span>
                             RECURSOS
                     </a>

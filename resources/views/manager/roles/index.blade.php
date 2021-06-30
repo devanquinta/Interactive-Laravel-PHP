@@ -15,24 +15,24 @@
             <h4 class="title_user" style="margin-top:3%;
             @if((Auth::user()->role_id) != 2) position:absolute;
             @endif">
-                RECURSOS DO  SISTEMA
+                PAPÉIS
             </h4>
         @else
             <h4 class="txt_index_root2">
-                RECURSOS DO  SISTEMA
+                PAPÉIS
             </h4>
         @endif
         @if((Auth::user()->role_id) == 2)
             <a href="{{route('roles.create')}}" class="btn btn-outline-dark" style="margin-left:74%;width:9%; padding:0.60%;">
-                <small style="text-shadow: 1px 1px #7e95f5">
-                    CRIAR
                 <small>
+                    CRIAR
+                </small>
             </a>
         @else
             <a href="{{route('roles.create')}}" class="btn btn-outline-dark" style="margin-left:88%;width:9%; padding:0.60%;">
-                <small style="text-shadow: 1px 1px #7e95f5">
-                    CRIAR
                 <small>
+                    CRIAR
+                </small>
             </a>
         @endif
         </div>
@@ -51,7 +51,7 @@
                     <th style="padding:20px">Data - Hora</th>
                     <th style="padding:20px">Editar</th>
                     <th style="padding:20px">Deletar</th>
-                    <th style="padding:20px">Inserir</tr>
+                    <th style="padding:20px;">Inserir</tr>
                 </tr>
             </thead>
             <tbody class="txt_index">
@@ -59,7 +59,7 @@
             @if(Auth::user()->role_id == 1)
                 @if(($role->id != 2 and $role->id != 1 ))
                 <tr style="font-size:16px">
-                    <td>{{$role->id}}</td>
+                    <td style="padding-left:20px">{{$role->id}}</td>
                     <td>{{$role->name}}: <span class="role_txt"><small>{{$role->role}}</span></td>
                     <td>{{$role->created_at->format('d/m/Y H:i:s')}}</td>
                     <td>
@@ -78,7 +78,7 @@
                         </form>
                     </td>
                     <td>
-                        <a href="{{route('roles.resources', $role->id)}}" class="insert" style="position: absolute;magin-left:0;margin-right: 0%;margin-top:0%;";>
+                        <a href="{{route('roles.resources', $role->id)}}" class="insert" style="position: absolute;magin-left:2%;margin-right: 0%;margin-top:0%;";>
                             {{-- ADICIONAR --}}
                         </a>
                     </td>
@@ -91,8 +91,8 @@
 {{-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ --}}
             @else
                 <tr class="txt_index_root" style="font-size:16">
-                    <td>{{$role->id}}</td>
-                    <td>{{$role->name}}: <span class="badge badge-danger" style="background: rgb(39, 38, 38)"><small>{{$role->role}}</small></td>
+                    <td style="padding-left:20px">{{$role->id}}</td>
+                    <td>{{$role->name}}: <span class="badge badge-danger" style="background: rgb(39, 38, 38)">{{$role->role}}</td>
                     <td>{{$role->created_at->format('d/m/Y H:i:s')}}</td>
                     <td>
                         <a href="{{route('roles.edit', $role->id)}}" class="up_black_c";>
@@ -104,13 +104,13 @@
                             @csrf
                             @method('DELETE')
                             <button onclick="return confirm('Tem certeza que deseja deletar este Papel?')"
-                            <button class="del_black_c" style="position:relative; margin-top:0%; margin-left:1%; margin-top:0%; margin-bottom: -20px">
+                            <button class="del_black_c" style="position:relative; margin-top:0%; margin-left:1%; margin-top:0%; margin-bottom: -20px;border:none">
                                 {{-- REMOVER --}}
                             </button>
                         </form>
                     </td>
                     <td>
-                        <a href="{{route('roles.resources', $role->id)}}" class="insert_black" style="position: absolute;margin-left: 0%;margin-top:-0.3%">
+                        <a href="{{route('roles.resources', $role->id)}}" class="insert_black" style="position: absolute;margin-left: 1%;margin-top:-0.3%">
                                 {{-- Adicionar --}}
                         </a>
                         </div>

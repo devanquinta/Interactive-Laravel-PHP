@@ -1,11 +1,16 @@
 <link href="{{ asset('css/topic.css') }}" rel="stylesheet">
 
+
 {{-- Layout dos Tópicos --}}
 @extends('layouts.app')
 {{-- tópico não encontrado --}}
 @section('content')
 
-<span class="gato">
+{{--  <span id="responsive-imgs" class="gato"></span>  --}}
+
+<span class="gato_blue img-responsive" id="responsive-imgs">
+  {{--  <img  src="https://www.icegif.com/wp-content/uploads/mario-icegif-10.gif" />  --}}
+  <img  src="https://www.icegif.com/wp-content/uploads/brawl-stars-icegif-3.gif" />
 </span>
     <div class="row" id="star">
         <div class="col-12">
@@ -21,7 +26,7 @@
             @forelse($topics as $topic)
                 <div class="list-group"  id="topic_1">
                     <span class="badge badge-primary" id="topic_3">
-                        {{ $topic->channel->slug }}
+                        {{ $topic->channel->name}}
                     </span>
                     <a href="{{ route('topics.show', $topic->slug) }}"
                         class="list-list-group-item list-group-item-action alert-light d-flex justify-content-sm-between align-items-center"
@@ -34,9 +39,9 @@
                             </small>
                         </div>
                         <div class="star">
-                            <img src="img/star.png" class="star_2" alt="https://br.freepik.com/">
-                            <div class="star_1">
-                                {{ $topic->interactions->count() }}
+                            <img src="img/star.gif" class="stargif_2" alt="https://br.freepik.com/">
+                            <div class="stargif_1">
+                                    <small class="star_num">{{ $topic->interactions->count() }}</small>
                             </div>
                         </div>
 

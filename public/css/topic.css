@@ -1,3 +1,45 @@
+@media(max-height: 760px)and (max-width: 1080px){
+    #app_1{
+        display: none;
+        padding: 10px;
+        background-attachment: fixed;
+
+
+
+    }
+}
+@media(min-height: 1400px)and (min-width: 2000px){
+    #app_1{
+        display: none;
+        padding: auto;
+        padding: 10px;
+        background-attachment: fixed;
+
+
+
+    }
+}
+
+div#responsive-imgs {
+}
+div#responsive-imgs img {
+  display: block;
+  margin: 5px auto;
+  max-width: 100%;
+}
+span#responsive-imgs {
+}
+span#responsive-imgs img {
+  display: block;
+  margin: 5px auto;
+  max-width: 100%;
+}
+/* ##################################################################################### */
+
+
+
+
+
 #topic_1
 {
     margin-bottom: 0.8%;
@@ -75,6 +117,19 @@
 {
     color:rgb(245, 27, 27); font-family:Arial, Helvetica, sans-serif; font-size: bold; font-weight:normal;
 }
+.stargif_1{
+
+    position: absolute; margin-left: 2.7%; margin-top: -2.9%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:larger; color: #212529;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+
+}
+.stargif_2{
+    height:77x; width:70px;
+    opacity: 0.8;
+}
 .star_1
 {
   position: absolute; margin-left: 1.1%; margin-top: -2.6%;
@@ -89,6 +144,27 @@
 
 }
 
+
+/* @media (min-width: 344px) and (max-width: 500px) { */
+@media screen and
+(max-width: 960px) and
+(max-height: 540px)
+{
+
+    .star_num {
+            display:none;
+        }
+
+}
+.star_num{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:normal;
+    color: #000000;
+    /* -webkit-filter: drop-shazow(1px 1px 1px rgb(138, 15, 35));
+    filter: drop-shazow(1px 1px 1px rgb(109, 13, 41)); */
+    opacity: 0.6;
+}
+
 .icon_del
 {
     background-image: url('/img/icons8-del.png')  !important;
@@ -98,7 +174,7 @@
     -webkit-transition: all 0.7s ease;
         transition: all 0.7s ease;
 }
-.icon_del:hover 
+.icon_del:hover
 {
     -webkit-transform:scale(1.2);
     transform:scale(1.2);
@@ -117,7 +193,7 @@
     position: relative; padding: 0px; margin-top: 0px; margin-left: 0% ;
 }
 
-.icon_del2:hover 
+.icon_del2:hover
 {
     -webkit-transform:scale(1.2);
     transform:scale(1.2);
@@ -142,25 +218,127 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 1px 1px #105302;box-shadow: 3px 3px #000;
 }
+/* ****************************<IMAGENS>***************************** */
 
 .gato
 {
-    background-image: url('/img/gato2.png')  !important; background-repeat: no-repeat; background-size: cover;
-    height: 140px; width:140px; position: absolute; margin-left: 30%; margin-top: -1.8%;   z-index: 1;
-    alt:"https://br.freepik.com/;
+    background-image: url('/img/gato2.png')  !important;
+    background-repeat: no-repeat;
+    background-size: cover;background-attachment: scroll;
+    height: 140px;
+    width:140px;
+    position: absolute;
+    margin-left: 26%;
+
+
+    align-items: center;
+    margin-top: -1.8%;
+    z-index: 1;
+    alt:"https://br.freepik.com/";
+    text-align:center;
+    transform:translateX;
+    -webkit-transform:translateX;
+    -moz-transform:translateX;
+    -ms-transform:translateX;
+    -o-transform:translateX;
+}@media screen and
+(min-width: 2560px) and
+(min-height: 2048px){ .gato_blue {
+     display:none;
+	}
+
 }
+.gato_blue
+{
+    /* background-image: url('/img/gato2.png')  !important; */
+    background-repeat: no-repeat;
+    background-size: cover;background-attachment: scroll;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    margin-left: 26%;
+    max-width:100%;
+
+
+    align-items: center;
+    margin-top: -2%;
+    z-index: 1;
+    alt:"www.icegif.com/";
+    text-align:center;
+    transform:translateX;
+    -webkit-transform:translateX;
+    -moz-transform:translateX;
+    -ms-transform:translateX;
+    -o-transform:translateX;
+}
+.mario
+{
+    /* background-image: url('/img/gato2.png')  !important; */
+    background-repeat: no-repeat;
+    background-size: cover;background-attachment: scroll;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-left: 26%;
+
+
+    align-items: center;
+    margin-top: 0%;
+    z-index: 1;
+    alt:"www.icegif.com/";
+    text-align:center;
+    transform:translateX;
+    -webkit-transform:translateX;
+    -moz-transform:translateX;
+    -ms-transform:translateX;
+    -o-transform:translateX;
+}
+
+
+/* @media screen and
+(max-width: 960px) and
+(max-height: 540px){ */
+@media screen and
+(max-width: 640px) and
+(max-height: 480px){ .logo {
+     display:none;
+	}
+
+}
+
 .logo
 {
     background-image: url('/img/logo10.png')  !important; background-repeat: no-repeat; background-size: cover;
-    width:53px; height:53px; margin-left: -14.5%; margin-top: -0.6%;position: absolute; z-index: 1;
+    width:53px; height:53px; margin-left: -6%; margin-top: -0.6%;position: absolute; z-index: 1;max-width: 53px; max-height: 53px; min-width:30px; ax-height: 30px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+
 
 }
+
+.logo:hover
+{
+    width:43px; height:43px; margin-top: -0.3%;
+}
+
+
+
 .txt_logo
 {
+
     background-image: url('/img/txt_logo.png')  !important; background-repeat: no-repeat; background-size: cover;
     width:132px; height:17px; margin-left: -10.2%; margin-top: 0.8%;position: absolute; z-index: 1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 
 }
+/* ****************************<\IMAGENS>***************************** */
+
 .created
 {
     color:	#ff9248;
@@ -198,13 +376,13 @@
 }
 .resposta
 {
-    font-size: larger; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-size: larger; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #212529; text-shadow: 2px 2px  lightseagreen;
 }
 
 .responder
 {
-    font-size: larger; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-size: larger; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #fcfdfd; text-shadow: 2px 2px  lightseagreen;
 }
 

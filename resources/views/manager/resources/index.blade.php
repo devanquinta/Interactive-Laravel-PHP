@@ -15,24 +15,24 @@
                 <h4 class="title_user" style="margin-top:3%;
                 @if((Auth::user()->role_id) != 2) position:absolute;
                 @endif">
-                    RECURSOS DO  SISTEMA
+                    RECURSOS 
                 </h4>
             @else
                 <h4 class="txt_index_root2">
-                    RECURSOS DO  SISTEMA
+                    RECURSOS 
                 </h4>
             @endif
             @if((Auth::user()->role_id) == 2)
                 <a href="{{route('resources.create')}}" class="btn btn-outline-dark" style="margin-left:74%;width:9%; padding:0.60%;">
-                    <small style="text-shadow: 1px 1px #7e95f5">
-                        CRIAR
                     <small>
+                        CRIAR
+                    </small>
                 </a>
             @else
                 <a href="{{route('resources.create')}}" class="btn btn-outline-dark" style="margin-left:88%;width:9%; padding:0.60%;">
-                    <small style="text-shadow: 1px 1px #7e95f5">
-                        CRIAR
                     <small>
+                        CRIAR
+                    </small>
                 </a>
             @endif
         </div>
@@ -58,7 +58,7 @@
             <tbody class="txt_index" style="font-size:16px">
             @forelse($resources as $resource)
                 <tr>
-                    <td>{{$resource->id}}</td>
+                    <td style="padding-left:20px">{{$resource->id}}</td>
                     <td>{{$resource->name}}:<span class="resource_txt">{{$resource->resource}}</span></td>
                     <td>{{$resource->created_at->format('d/m/Y H:i:s')}}</td>
                     <td>
@@ -71,7 +71,7 @@
                             @csrf
                             @method('DELETE')
                             <button onclick="return confirm('Tem certeza que deseja deletar este recurso?')"
-                                <button class="del_blue" style="margin-left:-10.5%;margin-top:0%;">
+                                <button class="del_blue" style="margin-left:-9.5%;margin-top:0%;">
                                     {{-- REMOVER --}}
                                 </button>
 
@@ -93,7 +93,7 @@
             @elseif(Auth::user()->role_id == 2)
                 @forelse($resources as $resource)
                     <tr class="txt_index_root" style="padding: 20px; font-size:16px">
-                        <td class="padding">{{$resource->id}}</td>
+                        <td class="padding" style="padding-left:20px">{{$resource->id}}</td>
                         <td>{{$resource->name}}:<span class="badge badge-danger" style="background: rgb(39, 38, 38); margin-left:1%; font-size:14px">{{$resource->resource}}</td>
                         <td>{{$resource->created_at->format('d/m/Y H:i:s')}}</td>
                         <td>
@@ -106,7 +106,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <button onclick="return confirm('Tem certeza que deseja deletar este recurso?')"
-                                <button class="del_black_c" style="position: absolute;margin-left:-14%; margin-top:-1.3%;border:none;align-content: center;">
+                                <button class="del_black_c" style="position: absolute;margin-left:-15.5%; margin-top:-1.3%;border:none;">
                                     {{-- REMOVER --}}
                                 </button>
                             </form></div>

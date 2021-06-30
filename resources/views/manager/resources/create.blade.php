@@ -41,23 +41,25 @@
                    </div>
                    @enderror
                </div>
-
+               <br>
+               </div>
+                <button class="btn_azul1" style="margin-left: 1.5%">
+                    CRIAR
+                </button>
                <div class="form-group">
+
+               <div class="form-group" style="opacity:0">
                    <label> Faz parte do menu?</label>
                    <div class="custom-control custom-radio">
-                       <input type="radio" id="isMenu1" name="is_menu" class="custom-control-input  @error('is_menu') is-invalid @enderror" value="1">
+                       <input type="radio" checked id="isMenu1" name="is_menu"  class="custom-control-input  @error('is_menu') is-invalid @enderror" value="1">
                        <label class="custom-control-label" for="isMenu1">Sim</label>
                    </div>
 
-                   <div class="custom-control custom-radio">
-                       <input type="radio" id="isMenu2" name="is_menu" class="custom-control-input  @error('is_menu') is-invalid @enderror" value="0">
+                   <div class="custom-control custom-radio" style="display: none">
+                       <input type="radio" id="isMenu2" name="is_menu"  class="custom-control-input  @error('is_menu') is-invalid @enderror" value="0">
                        <label class="custom-control-label" for="isMenu2">Não</label>
                    </div>
-               </div>
-               <div class="form-group">
-                <button class="btn_azul1">
-                    CRIAR
-                </button>
+               
             </div>
            </form>
        </div>
@@ -102,25 +104,25 @@
                    </div>
                    @enderror
                </div>
-
-               <div class="form-group">
-                   <label> Faz parte do menu?</label>
-                   <div class="custom-control custom-radio">
-                       <input type="radio" id="isMenu1" name="is_menu" class="custom-control-input  @error('is_menu') is-invalid @enderror" value="1">
-                       <label class="custom-control-label" for="isMenu1">Sim</label>
-                   </div>
-
-                   <div class="custom-control custom-radio">
-                       <input type="radio" id="isMenu2" name="is_menu" class="custom-control-input  @error('is_menu') is-invalid @enderror" value="0">
-                       <label class="custom-control-label" for="isMenu2">Não</label>
-                   </div>
-
-               </div>
-
+               <br>
                <div class="form-group">
                    <button class="btn btn-outline-success" style="font-size:bold; font-family: Verdana, Geneva, Tahoma, sans-serif">
                        CADASTRAR
                     </button>
+               </div>
+
+               <div class="form-group" style="opacity: 0;">
+                   <label> Faz parte do menu?</label>
+                   <div class="custom-control custom-radio">
+                       <input type="radio" checked id="isMenu1" name="is_menu" class="custom-control-input  @error('is_menu') is-invalid @enderror" value="1">
+                       <label class="custom-control-label" for="isMenu1">Sim</label>
+                   </div>
+
+                   <div class="custom-control custom-radio" style="display: none">
+                       <input type="radio" id="isMenu2" name="is_menu" class="custom-control-input  @error('is_menu') is-invalid @enderror" value="0">
+                       <label class="custom-control-label" for="isMenu2">Não</label>
+                   </div>
+
                </div>
            </form>
        </div>

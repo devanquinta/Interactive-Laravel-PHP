@@ -27,17 +27,21 @@ class UserController extends Controller
      */
     public function index()
     {
-        $admin = Role::get('role', 'ROLE_ADMIN')[0]->role;
-        $root = Role::get('role', 'ROLE_ROOT')[1]->role;
-        if (!(Auth::user()->role_id)) {
-            if ((!($admin)) or (!($root))) {
-                return redirect()->back();
+        try {
+            $admin = Role::get('role', 'ROLE_ADMIN')[0]->role;
+            $root = Role::get('role', 'ROLE_ROOT')[1]->role;
+            if ((Auth::user()->role_id > 2)) {
+                if (($admin != 'ROLE_ADMIN') or ($root != 'ROLE_ROOT')) {
+                    return redirect()->back();
+                }
             }
+            $users = $this->user->paginate(10);
 
-        }
-        $users = $this->user->paginate(10);
-
-        return view('manager.users.index', compact('users'));
+            return view('manager.users.index', compact('users'));
+        } catch (\Exception) {
+            dd("controller");
+            return view('topics.index')
+            ;}
     }
 
     /**
@@ -67,7 +71,7 @@ class UserController extends Controller
         try {
             // dd("Catch Update try");
             $data = $request->all();
-            
+
             $user = $this->user->find($id);
             $user->update($data);
 
@@ -110,4 +114,5 @@ class UserController extends Controller
             return redirect()->back();
         }
     }
+  
 }

@@ -153,7 +153,7 @@
 {
     background-image: url('/img/up_black.png');   background-repeat: no-repeat; background-size: cover;
     width: 35px; height:35px;padding:0px;position:absolute;
-    margin-bottom: 0%; margin-left:10%;margin-left: 0%;margin-top:0%;
+    margin-bottom: 0%; margin-left:10%;margin-left: 1%;margin-top:0%;
 
 }
 .up_black_c:hover {
@@ -168,7 +168,6 @@
 {
     background-image: url('/img/del_black.png');   background-repeat: no-repeat; background-size: cover;
     width: 35px; height:35px;
-    margin-left:-20%;border: 0;
 
 }
 .del_black_c:hover {
@@ -223,3 +222,26 @@ btn_white
     -o-transform:scale(1.1);
 }
 
+.config
+{
+    background-image: url('/img/sliders.svg')  !important;
+    height: 20px;
+    width:20px;
+
+}
+.menuColor{
+    color: #9561e2;
+    text-shadow: 1px 1px  #8842f1;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.logoutColor{
+    color:dbc5fd;
+    text-shadow: #a677ee 1px 1px 1px;
+}
+.logoutColor:hover{
+    color:#f4eefd;
+    text-shadow: #d6c1f5 1px 1px 1px;
+}

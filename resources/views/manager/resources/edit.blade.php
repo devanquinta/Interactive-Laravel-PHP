@@ -40,25 +40,24 @@
                     </div>
                     @enderror
                 </div>
-
-                <div class="form-group">
-                    <label> Faz parte do menu?</label>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="isMenu1" name="is_menu" class="custom-control-input" value="1" @if($resource->is_menu) checked @endif>
-                        <label class="custom-control-label" for="isMenu1">Sim</label>
-                    </div>
-
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="isMenu2" name="is_menu" class="custom-control-input" value="0"  @if(!$resource->is_menu) checked @endif>
-                        <label class="custom-control-label" for="isMenu2">Não</label>
-                    </div>
-
-                </div>
-
-                <div class="form-group">
+                <br>
+                 <div class="form-group">
                     <button class="btn_azul1">
                         ATUALIZAR
                     </button>
+                </div>
+                <div class="form-group" style="opacity: 0">
+                    <label> Faz parte do menu?</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" checked id="isMenu1" name="is_menu" class="custom-control-input" value="1" @if($resource->is_menu) checked @endif>
+                        <label class="custom-control-label" for="isMenu1">Sim</label>
+                    </div>
+
+                    <div class="custom-control custom-radio" style="display: none">
+                        <input type="radio" id="isMenu2" name="is_menu" class="custom-control-input" value="0">
+                        <label class="custom-control-label" for="isMenu2">Não</label>
+                    </div>
+
                 </div>
             </form>
         </div>
@@ -99,25 +98,24 @@
                 </div>
                 @enderror
             </div>
-
-            <div class="form-group">
-                <label> Faz parte do menu?</label>
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="isMenu1" name="is_menu" class="custom-control-input" value="1" @if($resource->is_menu) checked @endif>
-                    <label class="custom-control-label" for="isMenu1">Sim</label>
-                </div>
-
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="isMenu2" name="is_menu" class="custom-control-input" value="0"  @if(!$resource->is_menu) checked @endif>
-                    <label class="custom-control-label" for="isMenu2">Não</label>
-                </div>
-
-            </div>
-
+            <br>
             <div class="form-group">
                 <button class="btn btn-outline-success" style="font-size:bold; font-family: Verdana, Geneva, Tahoma, sans-serif">
                     ATUALIZAR
                 </button>
+            </div>
+            <div class="form-group" style="opacity: 0">
+                <label> Faz parte do menu?</label>
+                <div class="custom-control custom-radio">
+                    <input type="radio" checked id="isMenu1" name="is_menu" class="custom-control-input" value="1" @if($resource->is_menu) checked @endif>
+                    <label class="custom-control-label" for="isMenu1">Sim</label>
+                </div>
+
+                <div class="custom-control custom-radio" style="display: none">
+                    <input type="radio" id="isMenu2" name="is_menu" class="custom-control-input" value="0">
+                    <label class="custom-control-label" for="isMenu2">Não</label>
+                </div>
+
             </div>
         </form>
     </div>

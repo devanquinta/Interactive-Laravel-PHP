@@ -41,8 +41,9 @@ class AppServiceProvider extends ServiceProvider
                     return $resource->roles->contains($user->role);
                 });
             }
-        } catch (\Exception) {
-
+        } catch (\Exception $e) {
+            $message = env('APP_DEBUG') ? $e->getMessage() : 'Error! Não existe um canal';
+            flash($message)->warning();
             return null;
             return false;
         }

@@ -1,3 +1,5 @@
+
+
 #app_2
 {
   background-image: url('/img/game2.jpg')  !important;
@@ -17,13 +19,12 @@
 .logo
 {
     background-image: url('/img/logo10.png')  !important; background-repeat: no-repeat; background-size: cover;
-    width:53px; height:53px; margin-left: -14.5%; margin-top: -1.7%;position: absolute; z-index: 1;
-
+    width:50px; height:50px; z-index: 1; padding-top: 1%;
 }
 .txt_logo
 {
     background-image: url('/img/txt_logo.png')  !important; background-repeat: no-repeat; background-size: cover;
-    width:133px; height:17px; margin-left: -10.2%; margin-top: -0.5%;position: absolute; z-index: 1;
+    width: 60px; height: 10px; margin-left: 0; margin-top: -1;position: absolute; z-index: 1;;max-width:20px;max-height:20px;min-width:35px;min-height:25px;
 
 }
 .text

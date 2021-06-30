@@ -25,47 +25,70 @@ Route::group(
     ['middleware' => 'access.control.list'], function () {
 
         Route::resource('topics', 'TopicController');
-    }
-);
+        Route::resource('interactions', 'InteractionController');
 
-Route::resource('interactions', 'InteractionController');
+        Route::post('/interactions/store', 'InteractionController@store')->name('interactions.store');
+        Route::post('/topics/delete', 'TopicController@delete')->name('topics.delete');
 
-Route::post('/interactions/store', 'InteractionController@store')->name('interactions.store');
-Route::post('/topics/delete', 'TopicController@delete')->name('topics.delete');
+    });
 
 Auth::routes();
 
 Route::group(
-    ['middleware' => 'auth', 'namespace' => 'Manager', 'prefix' => 'manager'], function () {
-        Route::get(
-            '/', function () {
-                return redirect()->route('users.index');
-            }
-        );
+    ['middleware' => 'access.control.list'], function () {
 
-        Route::resource('roles', 'RoleController');
-        Route::get('roles/{role}/resources', 'RoleController@syncResources')->name('roles.resources');
-        Route::put('roles/{role}/resources', 'RoleController@updateSyncResources')->name('roles.resources.update');
+        Route::group(
+            ['middleware' => 'auth', 'namespace' => 'Manager', 'prefix' => 'manager'], function () {
+                Route::get(
+                    '/', function () {
+                        return redirect()->route('users.index');
 
-        Route::resource('users', 'UserController');
-        Route::resource('resources', 'ResourceController');
-        Route::resource('channels', 'ChannelController');
+                    }
+                );
 
-    }
-);
+                Route::resource('roles', 'RoleController');
+                Route::get('roles/{role}/resources', 'RoleController@syncResources')->name('roles.resources');
+                Route::put('roles/{role}/resources', 'RoleController@updateSyncResources')->name('roles.resources.update');
 
-Route::group(
-    ['middleware' => 'auth'], function () {
-        Route::get('routes', function () {
-            foreach (Route::getRoutes()->getRoutes() as $route) {
-                print $route->getName() . '<br><hr><strong style="color:blue; font-family:verdana, arial, helvetica; font-size:20px; border-bottom: 2px solid orange;"><br>';
-            }
-        });
+                Route::resource('users', 'UserController');
+                Route::resource('resources', 'ResourceController');
+                Route::resource('channels', 'ChannelController');
+                
+            });
+
     });
 
+// Route::group(
+//     ['middleware' => 'access.control.list'], function () {
+        Route::group(
+            ['middleware' => 'auth'],
+            function () {
+                Route::group(
+                    ['middleware' => 'auth', 'namespace' => 'Manager', 'prefix' => 'manager'], function () {
+                        Route::get('routes', function () {
+                            foreach (Route::getRoutes()->getRoutes() as $route) {
+                                print $route->getName() . '<br><hr><strong style="color:blue; font-family:verdana, arial, helvetica; font-size:20px; border-bottom: 2px solid orange;"><br>';
+                            }
+                        });
+                    }
+                );
+            });
+
+    // });
+
 Route::group(
     ['middleware' => 'auth'], function () {
-        Route::get('/clear', function () {
+        Route::get('clear', function () {
             $exitCode = Artisan::call('cache:clear');
+            return redirect()->back();
         });
     });
+
+    Route::group(
+        ['middleware' => 'auth'], function () {
+            Route::get('limpar', function () {
+                $exitCode = Artisan::call('cache:clear');
+                return redirect()->back();
+            })->name('limpar');
+        });
+    

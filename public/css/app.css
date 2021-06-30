@@ -18,9 +18,29 @@
     /* background-color: #f8fafc; */
     background-image: url('/img/white.jpg')  !important; background-repeat: no-repeat; background-size: cover;
     opacity: 0.8;
-
-
   }
+.muduloConfig{
+  width:20px; 
+  height:20px;
+}
+.muduloConfig:hover{
+  width:21px; 
+  height:21px;
+}
+.textConfig{
+  font-size: normal;
+}
+.textConfig:hover{
+  font-size: 16.1px;
+  color:#d1d8df;
+}
+.textConfigUser{
+  font-size: normal;
+}
+.textConfigUser:hover{
+  font-size: 16.1px;
+  color:#dbc5fd;
+}
 :root {
   --blue: #3490dc;
   --indigo: #6574cd;

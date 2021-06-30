@@ -39,7 +39,9 @@ class AuthServiceProvider extends ServiceProvider
                     }
                 );
             }
-        } catch (\Exception) {
+        } catch (\Exception $e) {
+            $message = env('APP_DEBUG') ? $e->getMessage() : 'Error! Não existe um canal';
+            flash($message)->warning();
             return null;
             return false;
         }

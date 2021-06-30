@@ -1,6 +1,9 @@
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class></div>
@@ -11,11 +14,8 @@
     {{-- <title>{{ config('app.name', 'Interact Play') }}</title> --}}
     <title>Interact Play</title>
 
-
-
-
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -48,9 +48,23 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="mr-auto navbar-nav">
                         <li class="nav-item">
-                            <span class="txt_logo"></span>
-                            <a href="{{ route('topics.index') }}" class="nav-link logo"></a>
-                            {{-- AQUI VAI SER O NOME DO APP / LOGO --}}
+                            {{-- <span class="txt_logo img-responsive img-thumbnail"></span> --}}
+                            @auth
+                               
+                                 <a href="{{ route('topics.index') }}" class="nav-link logo img-rounded img-fluid img-responsive"></a>
+                                 @if(Auth::check())
+                                    <a href="{{ route('limpar') }}"</a>
+                                 @endif
+                                {{-- AQUI VAI SER O NOME DO APP / LOGO --}}
+                            @endauth
+                            @if (!(Auth::check()))
+                                <a href="{{ route('topics.index') }}"
+                                 class="nav-link logo img-rounded img-fluid img-responsive" style="margin-left:-4%; margin-top:-1.3%">
+                                </a>
+                            @endif
+
+
+
                         </li>
                         @if ( Auth::user() and ( Auth::user()->role_id  ) != 2 )
                         <li class="nav-item">

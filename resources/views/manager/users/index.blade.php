@@ -15,7 +15,7 @@
     <div class="row">
         <div class="mt-4 col-md-12 d-flex justify-content-between align-items-center">
             <h4 class="title_user" style="margin-top:2%;padding-bottom:2%">
-                CONFIGURAÇÕES DE USUÁRIOS
+                USUÁRIOS
             </h4>
         </div>
     </div>
@@ -76,7 +76,7 @@
 <div class="row">
         <div class="mt-4 col-md-12 d-flex justify-content-between align-items-center">
             <h4 class="txt_index_root2">
-                CONFIGURAÇÕES DE USUÁRIOS
+                USUÁRIOS
             </h4>
                 <a href="{{route('channels.index')}}" class="btn btn-outline-dark">
                     <small>CANAIS</small>

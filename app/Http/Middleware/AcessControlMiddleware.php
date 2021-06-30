@@ -2,16 +2,17 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use App\User;
-use App\Channel;
-use App\Http\Requests\TopicRequest;
-use App\Topic;
 use App\Role;
+use App\User;
+use Closure;
+// use App\Channel;
+// use App\Http\Requests\TopicRequest;
+// use App\Topic;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
+
+// use Illuminate\Support\Str;
 
 class AcessControlMiddleware
 {
@@ -25,24 +26,14 @@ class AcessControlMiddleware
      */
     public function handle($request, Closure $next)
     {
-        // $role = Role::get('role', 'ROLE_ROOT');
-        // $su = Role::where('role', 'ROLE_USER_SU');        
-        // // dd($role[1]->role);
-        // $auth = User::find(Auth::user());
-        // $user = User::all();
-        $role = Role::all();
-        // $r = Role::find(2)->where(Auth::user()->id);
-        // dd($r);
-        // $r =  Role::where('role', 'ROLE_ROOT', Auth::check());
-        // dd(Auth::user()->role());
 
-        
-        // $user = Auth::user()->isRoot();
+        $role = Role::all();
+
         $rel = Role::find(2);
-        $user =Auth::user($rel);
+        $user = Auth::user($rel);
         $user->role_id;
-       
-        if (($user->role_id == 2) or ($user->role_id == 2))   {
+
+        if (($user->role_id == 2) or ($user->role_id == 2)) {
             $ignoreResources = config('accessRoot')['ignore.roles'];
 
             if (!in_array($request->route()->getName(), $ignoreResources)) {

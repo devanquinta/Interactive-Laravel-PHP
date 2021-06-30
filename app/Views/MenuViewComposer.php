@@ -6,33 +6,28 @@ class MenuViewComposer
 {
     public function compose($view)
     {
-        $roleUser = auth()->user()->role;
+        try {
+            $roleUser = auth()->user()->role;
 
-        $modulesFiltered = session()->get('modules') ?: [];
+            $modulesFiltered = session()->get('modules') ?: [];
 
-        if (!$modulesFiltered) {
-            foreach ($roleUser->modules as $key => $module) {
+            if (!$modulesFiltered) {
+                foreach ($roleUser->modules as $key => $module) {
+                    $modulesFiltered[$key]['name'] = $module->name;
 
-                $modulesFiltered[$key]['name'] = $module->name;
-
-                foreach ($module->resources as $resource) {
-
-                    if ($resource->roles->contains($roleUser)) {
-
-                        $modulesFiltered[$key]['resources'][] = $resource;
-
+                    foreach ($module->resources as $resource) {
+                        if ($resource->roles->contains($roleUser)) {
+                            $modulesFiltered[$key]['resources'][] = $resource;
+                        }
                     }
-
                 }
 
+                session()->put('modules', $modulesFiltered);
             }
-
-            session()->put('modules', $modulesFiltered);
+            return $view->with('modules', $modulesFiltered);
+        } catch (\Exception) {
+            return redirect()->back();
         }
-
-        // dd($modulesFiltered);
-
-        return $view->with('modules', $modulesFiltered);
     }
 
 }

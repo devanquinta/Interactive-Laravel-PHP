@@ -72,6 +72,17 @@ class TopicController extends Controller
     public function store(TopicRequest $request)
     {
         try {
+
+            $data = $request->all();
+
+            $topCount = Topic::where('title', $data['title']);
+
+            if ($topCount->count()) {
+                flash('Tópico existente. Crie um novo tópico!')->warning();
+
+                return redirect()->back();
+            }
+
             $topic = $request->all();
             $topic['slug'] = Str::slug($topic['title']);
             $user = User::find(Auth::user()->id);
@@ -133,6 +144,17 @@ class TopicController extends Controller
     {
 
         try {
+
+            $data = $request->all();
+
+            $topCount = Topic::where('title', $data['title']);
+
+            if ($topCount->count()) {
+                flash('Tópico existente. atualize o tópico!')->warning();
+
+                return redirect()->back();
+            }
+
             $topic = $this->topic->whereSlug($topic)->first();
 
             $topic->update($request->all());
@@ -175,7 +197,6 @@ class TopicController extends Controller
     {
         try {
             $interaction = $this->interaction->where($interaction)->first();
-            dd("delete try"); //$id
             $interaction->delete();
 
             flash('Resposta removida com sucesso!')->success();
@@ -183,8 +204,6 @@ class TopicController extends Controller
             return redirect()->back();
 
         } catch (\Exception$e) {
-            dd("delet catch"); //$id
-
             $message = env('APP_DEBUG') ? $e->getMessage() : 'Erro ao processar remoção...';
 
             flash($message)->error();

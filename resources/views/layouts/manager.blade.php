@@ -38,15 +38,33 @@
 </head>
 <body id="back">
 <nav class="p-0 shadow navbar navbar-dark sticky-top bg-dark flex-md-nowrap">
-    <a class="px-3 mr-0 navbar-brand col-md-3 col-lg-2" href="#">
-        Configurações
-    </a>
+    @if(Auth::user()->role_id == 2)
+        <a class="px-3 mr-0 navbar-brand col-md-3 col-lg-2" @if(request()->is('manager/users')) active @endif href="{{route('users.index')}}">
+            <img  src="/img/sliders.svg" class="img-responsive muduloConfig"/> 
+            <span class="textConfig">CONFIGURAÇÕES</span>
+        </a>
+    @endif
+    @if(Auth::user()->role_id == 1)
+        <div>
+            <a class="px-3 mr-0 navbar-brand col-md-3 col-lg-2" @if(request()->is('manager/users')) active @endif href="{{route('users.index')}}">
+                <img  src="/img/sliders.svg" class="img-responsive muduloConfig"/> 
+                <span class="textConfigUser">CONFIGURAÇÕES</span>
+            </a>
+             
+        </div>
+        
+    @endif
+     
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <ul class="px-3 navbar-nav">
         <li class="nav-item text-nowrap">
-            <a class="nav-link" href="#" onclick="event.preventDefault(); document.querySelector('form.logout').submit();">Logout</a>
+            <a class="nav-link" href="#" onclick="event.preventDefault(); document.querySelector('form.logout').submit();">
+                
+                <span @if (Auth::user()->role_id == 1) class="logoutColor" @endif>Logout</span>
+                
+            </a>
             <form action="{{route('logout')}}" method="post" class="logout" style="display: none;">
                 @csrf
             </form>
