@@ -147,13 +147,24 @@ class TopicController extends Controller
 
             $data = $request->all();
 
-            $topCount = Topic::where('title', $data['title']);
+            $titleCount = Topic::where('title', $data['title']);
+            $bodyCount = Topic::where('body', $data['body']);
 
-            if ($topCount->count()) {
+            if (($titleCount->count()) and ($bodyCount->count()) == 1) {
                 flash('Tópico existente. atualize o tópico!')->warning();
-
+                
                 return redirect()->back();
             }
+           
+
+
+            // if (!($bodyCount->count())) {
+            //     flash('certo!')->warning();
+
+            //     return redirect()->back();
+            // }
+
+            
 
             $topic = $this->topic->whereSlug($topic)->first();
 

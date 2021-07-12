@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\InteractionRequest;
 use App\Interaction;
 use App\Topic;
+use App\Http\Requests\TopicRequest;
+use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class InteractionController extends Controller
 {
@@ -26,8 +31,12 @@ class InteractionController extends Controller
     {
         try
         {
+
             $interaction = $request->all();
-            $interaction['user_id'] = 1;
+            
+            $user = User::find(Auth::user()->id);
+            
+            $interaction['user_id'] = $user->id;
             $topic = Topic::find($request->topic_id);
             $topic->interactions()->create($interaction);
 
