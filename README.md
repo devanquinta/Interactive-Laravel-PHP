@@ -62,4 +62,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # Interactive
 <h2>Linux:</h2>
 <h5>Instalando MYSQL 8.</h5>
-sudo apt install mysql-server
+<p>sudo apt update</p>
+<p>sudo apt install mysql-server</p>
