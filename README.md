@@ -61,5 +61,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # Interactive
 <h2>Linux:</h2>
-Instalando MYSQL.
+<h5>Instalando MYSQL 8.</h5>
 sudo apt install mysql-server
