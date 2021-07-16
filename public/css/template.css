@@ -1,0 +1,16 @@
+#back
+{
+    background-image: url('/img/magic.jpg')  !important;
+    background-repeat: no-repeat; background-size: cover;
+    opacity: 0.8;
+}
+
+#sync
+{
+    background: #000;
+    background-image: url('/img/azul.jpg')  !important;
+
+    /* background-image: url('/img/magic.jpg')  !important;
+    background-repeat: no-repeat; background-size: cover; */
+    opacity: 4;
+}
