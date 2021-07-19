@@ -92,3 +92,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     exit;</p>
  # ALTERAR SENHA 
  <p>ALTER USER 'usuario'@'localhost' IDENTIFIED BY 'nova-senha';</p>
+  <BR>
+<h5>Instalando PHP 8.</h5>
+<p>sudo apt-get install software-properties-common</p>
+<p>sudo add-apt-repository ppa:ondrej/php>/p>
+<p>sudo apt update && sudo apt install php8.0 php8.0-intl php8.0-mysql php8.0-sqlite3 php8.0-gd</p>
