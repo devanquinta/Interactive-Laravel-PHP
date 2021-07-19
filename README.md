@@ -86,3 +86,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <p>configuração da senha->sudo mysql_secure_installation</p>
 ....................
 ....................
+<p>CREATE USER 'novo_usuario'@'localhost' IDENTIFIED BY 'senha_forte';,/p>
+<p>GRANT ALL PRIVILEGES ON * . * TO 'novo_usuario'@'localhost';</p>
+<p>FLUSH PRIVILEGES;
+    exit;</p>
+ # ALTERAR SENHA 
+ <p>ALTER USER 'root'@'localhost' IDENTIFIED BY 'nova-senha';</p>
