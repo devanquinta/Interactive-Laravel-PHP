@@ -91,4 +91,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <p>FLUSH PRIVILEGES;
     exit;</p>
  # ALTERAR SENHA 
- <p>ALTER USER 'root'@'localhost' IDENTIFIED BY 'nova-senha';</p>
+ <p>ALTER USER 'usuario'@'localhost' IDENTIFIED BY 'nova-senha';</p>
