@@ -108,3 +108,5 @@ php -r "copy ('https://getcomposer.org/installer', 'composer-setup.php');"
  php composer-setup.php
  php -r "unlink ('composer-setup.php');" 
  <br>
+      <h5>Instalando o Laravel.</h5>
+      <p>composer global require "laravel/installer"</p>
