@@ -105,7 +105,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
       <p>DB_DATABASE=nome_do_banco # não precisa criar nenhuma tabela</p>
       <p>DB_USERNAME=nome_do_usuario</P>
       <P>DB_PASSWORD=senha</P>
-<br>
 ...................................................
 <br>
 <h5>Instalando PHP 8.</h5>
