@@ -99,12 +99,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <br>
 ...................................................
 <br>
-DB_CONNECTION=mysql 
-DB_HOST=localhost # Banco de dados local
-DB_PORT=3306
-DB_DATABASE=nome_do_banco # não precisa criar nenhuma tabela
-DB_USERNAME=nome_do_usuario
-DB_PASSWORD=senha
+      <p>DB_CONNECTION=mysql</p> 
+      <p>DB_HOST=localhost # Banco de dados local</p>
+      <p>DB_PORT=3306</p>
+      <p>DB_DATABASE=nome_do_banco # não precisa criar nenhuma tabela</p>
+      <p>DB_USERNAME=nome_do_usuario</P>
+      <P>DB_PASSWORD=senha</P>
 <br>
 ...................................................
 <br>
