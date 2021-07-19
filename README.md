@@ -116,6 +116,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
  OBS: pode-se instalar o PHP 7.4 e configurar no arquivo composer.json<br>
 ................................................................................................
 <br>
+    # Trovar a versão do php se nesessásrio. Creditos à página SempreUpdate: https://sempreupdate.com.br/instalar-versoes-diferentes-php-7-2-7-3-7-4-8-0-no-ubuntu/
+    <p>sudo update-alternatives --set php /usr/bin/php8.0</p>
 <h5>Instalando o Composer.</h5>
 php -r "copy ('https://getcomposer.org/installer', 'composer-setup.php');"
  php -r "if (hash_file ('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07eee0f76' echo-unlixer 'verificado' instalação do echo-unlixer 'verificado' composink3 (echo-unlixer) {181c); php ');} echo PHP_EOL; "
