@@ -93,6 +93,21 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
  # ALTERAR SENHA 
  <p>ALTER USER 'usuario'@'localhost' IDENTIFIED BY 'nova-senha';</p>
   <BR>
+<h5>Configuração do banco de Dados no arquino .env</h5>
+<p>cp .env.example .env</p>
+<p>dentro do arquivo .env : configurar o banco</p>
+<br>
+...................................................
+<br>
+DB_CONNECTION=mysql 
+DB_HOST=localhost # Banco de dados local
+DB_PORT=3306
+DB_DATABASE=nome_do_banco # não precisa criar nenhuma tabela
+DB_USERNAME=nome_do_usuario
+DB_PASSWORD=senha
+<br>
+...................................................
+<br>
 <h5>Instalando PHP 8.</h5>
 <p>sudo apt-get install software-properties-common</p>
 <p>sudo add-apt-repository ppa:ondrej/php>/p>
