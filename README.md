@@ -110,7 +110,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <h5>Instalando PHP 8.</h5>
 <p>sudo apt-get install software-properties-common</p>
 <p>sudo add-apt-repository ppa:ondrej/php>/p>
-<p>sudo apt update && sudo apt install php8.0 php8.0-intl php8.0-mysql php8.0-sqlite3 php8.0-gd</p>
+<p>sudo apt update && sudo apt install php8.0 php8.0-intl php8.0-mysql php8.0-sqlite3 php8.0-gd php8.0-mbstring</p>
 ................................................................................................
 <br>
  OBS: pode-se instalar o PHP 7.4 e configurar no arquivo composer.json<br>
