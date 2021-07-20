@@ -70,11 +70,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <br>
 <h5>Recursos:<h5>
 <p>Instalação do Laravel 8</p>
-<p>Instalação do php 8 e as depêndencias para se trabalhar com Laravel<p>
+<p>Instalação do php 8 e as depêndencias para se trabalhar com Laravel</p>
 <p>Instalar Composer</p>
 <p>Mysql 8 ou 5,7 e configurar compiando do arquivo env_projeto  para o arquivo .env, este arquivo tem que ser criado para configurar o banco de dados comforme a senha e o usuário</p>
 <p>se quiser trabalhar com apache configurar no sistema o apache2</p>
-</p>comando principal: php artsan migrate:refresh --seed</p>
+<p>comando principal: php artsan migrate:refresh --seed</p>
 .......................
 .......................
 <p>****DOCUMENTAÇÃO AINDA EM CONSTRUÇÃO***</P>
@@ -86,7 +86,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <p>configuração da senha->sudo mysql_secure_installation</p>
 ....................
 ....................
-<p>CREATE USER 'novo_usuario'@'localhost' IDENTIFIED BY 'senha_forte';,/p>
+<p>CREATE USER 'novo_usuario'@'localhost' IDENTIFIED BY 'senha_forte';</p>
 <p>GRANT ALL PRIVILEGES ON * . * TO 'novo_usuario'@'localhost';</p>
 <p>FLUSH PRIVILEGES;
     exit;</p>
@@ -116,7 +116,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
  OBS: pode-se instalar o PHP 7.4 e configurar no arquivo composer.json<br>
 ................................................................................................
 <br>
-    # Trovar a versão do php se nesessásrio. Creditos à página SempreUpdate: https://sempreupdate.com.br/instalar-versoes-diferentes-php-7-2-7-3-7-4-8-0-no-ubuntu/
+    # Trocar a versão do php se nesessásrio. Creditos à página SempreUpdate: https://sempreupdate.com.br/instalar-versoes-diferentes-php-7-2-7-3-7-4-8-0-no-ubuntu/
     <p>sudo update-alternatives --set php /usr/bin/php8.0</p>
 <h5>Instalando o Composer.</h5>
 php -r "copy ('https://getcomposer.org/installer', 'composer-setup.php');"
