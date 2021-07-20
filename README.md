@@ -126,3 +126,15 @@ php -r "copy ('https://getcomposer.org/installer', 'composer-setup.php');"
  <br>
       <h5>Instalando o Laravel.</h5>
       <p>composer global require "laravel/installer"</p>
+    <br>
+    <h5>Levantando as dependencias.</h5>
+    <p>composer install</p>
+    <br>
+    <h5>Iniciando o banco de dados com informações para liberar o sistema</h5>
+    <p>php artisan migrate:refresh --seed</p>
+    <br>
+    <h5>Gerando chave</h5>
+    <p>php artisan key:generate</p>
+    <br>
+    <h2>Levantando o projeto: deploy</h2>
+    <p>php artisan serve</p>
