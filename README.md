@@ -139,7 +139,7 @@ php -r "copy ('https://getcomposer.org/installer', 'composer-setup.php');"
     <br>
     <h2>Levantando o projeto: deploy</h2>
     <p>php artisan serve</p>
-    <h3> OBS: o comando php artisan migrate:refresh --seed inicia o banco dedos configurado já com algumas informações</h3>
+    <h3> OBS: o comando php artisan migrate:refresh --seed inicia o banco dados configurado já com algumas informações</h3>
     <h5>Login: root@example.com</h5>
     <h5>senha : abcd1234</h5>
     <h4> Este é o usuário Moderador que libera o sistema</h4>
