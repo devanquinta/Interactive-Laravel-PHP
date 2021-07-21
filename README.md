@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+https://github.com/<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -138,3 +138,11 @@ php -r "copy ('https://getcomposer.org/installer', 'composer-setup.php');"
     <br>
     <h2>Levantando o projeto: deploy</h2>
     <p>php artisan serve</p>
+    <h3> OBS: o comaando php artisan migrate:refresh --seed inicia o banco dedos configurado já com algumas informações</h3>
+    <h5>Login: root@example.com</h5>
+    <h5>senha : abcd1234</h5>
+    <h4> Este é o usuário Moderador que libera o sistema</h4>
+    <br>
+    <h4> Usuário administrador</h4>
+    <h5> Login: admin@example.com</h5>
+    <h5> Senha: abcd1234</h5>
