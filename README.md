@@ -76,11 +76,10 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <p>Mysql 8 ou 5,7 e configurar compiando do arquivo env_projeto  para o arquivo .env, este arquivo tem que ser criado para configurar o banco de dados comforme a senha e o usuário</p>
 <p>se quiser trabalhar com apache configurar no sistema o apache2</p>
 <p>comando principal: php artsan migrate:refresh --seed</p>
-.......................
-.......................
+<br>
 <br>
 <p>****DOCUMENTAÇÃO AINDA EM CONSTRUÇÃO***</P>
-<BR>
+<br>
 <h2>Linux:</h2>
 <h5>Instalando MYSQL 8.</h5>
 <p>sudo apt update</p>
