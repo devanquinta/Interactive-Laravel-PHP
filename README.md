@@ -1,4 +1,64 @@
-https://github.com/<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+128
+
+      <p>composer global require "laravel/installer"</p>
+
+129
+
+    <br>
+
+130
+
+    <h5>Levantando as dependencias.</h5>
+
+131
+
+    <p>composer install</p>
+
+132
+
+    <br>
+
+133
+
+    <h5>Iniciando o banco de dados com informações para liberar o sistema</h5>
+
+134
+
+    <p>php artisan migrate:refresh --seed</p>
+
+135
+
+    <br>128
+
+      <p>composer global require "laravel/installer"</p>
+
+129
+
+    <br>
+
+130
+
+    <h5>Levantando as dependencias.</h5>
+
+131
+
+    <p>composer install</p>
+
+132
+
+    <br>
+
+133
+
+    <h5>Iniciando o banco de dados com informações para liberar o sistema</h5>
+
+134
+
+    <p>php artisan migrate:refresh --seed</p>
+
+135
+
+    <br>https://github.com/<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -138,7 +198,41 @@ php -r "copy ('https://getcomposer.org/installer', 'composer-setup.php');"
     <br>
     <h2>Levantando o projeto: deploy</h2>
     <p>php artisan serve</p>
-    <h3> OBS: o comaando php artisan migrate:refresh --seed inicia o banco dedos configurado já com algumas informações</h3>
+    <h3> OBS: o coma93
+
+​
+
+94
+
+### Premium Partners
+
+95
+
+​
+
+96
+
+- **[Vehikl](https://vehikl.com/)**
+
+97
+
+- **[Tighten Co.](https://tighten.co)**
+
+98
+
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+
+99
+
+- **[64 Robots](https://64robots.com)**
+
+100
+
+- **[Cubet Techno Labs](https://cubettech.com)**
+
+101
+
+- **[Cyber-Duck](https://cyber-duck.co.uk)**ndo php artisan migrate:refresh --seed inicia o banco dedos configurado já com algumas informações</h3>
     <h5>Login: root@example.com</h5>
     <h5>senha : abcd1234</h5>
     <h4> Este é o usuário Moderador que libera o sistema</h4>
