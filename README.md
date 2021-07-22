@@ -125,7 +125,7 @@ php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
  <br>
-      <h5>Instalando o Laravel.</h5>
+      <h5>Instalando o Laravel</h5>
       <p>composer global require "laravel/installer"</p>
     <br>
     <h5>Levantando as dependencias.</h5>
