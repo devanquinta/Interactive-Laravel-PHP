@@ -121,9 +121,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     <p>sudo update-alternatives --set php /usr/bin/php8.0</p>
 <h5>Instalando o Composer.</h5>
 php -r "copy ('https://getcomposer.org/installer', 'composer-setup.php');"
- php -r "if (hash_file ('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07eee0f76' echo-unlixer 'verificado' instalação do echo-unlixer 'verificado' composink3 (echo-unlixer) {181c); php ');} echo PHP_EOL; "
- php composer-setup.php
- php -r "unlink ('composer-setup.php');" 
+php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07eelixer's 'check unified installation of echo-181' echo-181's 'composite-lixer' and 'unified' echo-181' lixer installation; php ');} echo PHP_EOL; "
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
  <br>
       <h5>Instalando o Laravel.</h5>
       <p>composer global require "laravel/installer"</p>
